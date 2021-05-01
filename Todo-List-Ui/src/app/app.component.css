@@ -1,0 +1,43 @@
+hr {
+  background-color: black;
+}
+
+input {
+  border: 3px solid rgb(59, 0, 114);
+}
+
+button {
+  /* margin-left: 5px; */
+  margin-right: 5px;
+  width: 100%;
+}
+
+.list-group-item {
+  font-family: "Comic Sans";
+  font-size: 2em;
+  /* font-size: 1em; */
+  font-weight: bold;
+  color: rgb(17, 0, 255);
+  text-align: center;
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.wider {
+  width: 100%;
+}
+
+label {
+  /* margin-right: 5px; */
+  width: 100%;
+
+  height: 5%;
+
+  font-family: Verdana, Arial, Helvetica, sans-serif; 
+
+	font-size: 3em;
+
+	color: #000000;
+
+	margin: 3px 2px 0px 2px;
+
+}

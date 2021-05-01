@@ -1,0 +1,109 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12">
+      <h1 class="text-center">Todo List</h1>
+      <h5 class="text-center">Made By : Shivansh Upadhyay</h5>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12">
+      <input
+        type="text"
+        class="form-control"
+        [(ngModel)]="theBarToGetValueForTheTodo"
+      />
+      <!-- <p>{{theBarToGetValueForTheTodo}}</p> -->
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <button
+        class="btn btn-lg btn-success"
+        (click)="addTodo()"
+        [disabled]="editing"
+      >
+        Add
+      </button>
+    </div>
+    <div class="col">
+      <button class="btn btn-lg btn-danger" (click)="deleteTodo()">
+        Delete
+      </button>
+    </div>
+    <div class="col">
+      <button class="btn btn-lg btn-warning" (click)="getThem()">
+        Fetch Data
+      </button>
+    </div>
+    <div class="col">
+      <button class="btn btn-lg btn-secondary" (click)="clearTheString()">
+        Clear
+      </button>
+    </div>
+    <!-- <div class="col">
+      <button
+        class="btn btn-lg btn-primary"
+        [disabled]="!editing"
+        (click)="saveTodo()"
+      >
+        Save
+      </button>
+    </div> -->
+  </div>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12">
+      <ul class="list-group">
+        <a
+          class="list-group-item"
+          style="cursor: pointer"
+          *ngFor="let todo of todoList; let i = index"
+          (click)="editingModeActivated(i, todo.todo)"
+          >{{ todo.todo }}
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <button class="btn btn-lg btn-outline-dark" (click)="onSubPage()">
+        ⟸
+      </button>
+    </div>
+    <div class="col">
+      <button class="btn btn-lg btn-outline-dark" (click)="onAddPage()">
+        ⟹
+      </button>
+    </div>
+    <div class="col">
+      <button class="btn btn-lg btn-outline-dark" (click)="onAddAmount()">
+        ⇑
+      </button>
+    </div>
+    <div class="col">
+      <button class="btn btn-lg btn-outline-dark" (click)="onSubAmount()">
+        ⇓
+      </button>
+    </div>
+  </div>
+</div>
+<hr />
+<div class="container">
+  <div class="row">
+    <div class="col-xl-12">
+      <label class="text-center">Amount Per Page : {{ amount }}</label>
+      <label class="text-center">Page : {{ place / amount + 1 }}</label>
+    </div>
+  </div>
+</div>
